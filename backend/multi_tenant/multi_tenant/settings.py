@@ -30,8 +30,10 @@ ALLOWED_HOSTS = []
 
 # Application definition
 SHARED_APPS = (
+    'daphne',
     'django_tenants',
     'customers',
+    'channels',
     'django.contrib.contenttypes',
     'django.contrib.auth',
     'django.contrib.sessions',
@@ -81,6 +83,7 @@ TEMPLATES = [
 ]
 
 ASGI_APPLICATION = "multi_tenant.asgi.application"
+
 CHANNEL_LAYERS = {
     "default": {
         "BACKEND": "channels.layers.InMemoryChannelLayer",
